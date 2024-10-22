@@ -1,28 +1,22 @@
+// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './Components/Header';
-import About from './Components/About';
-import Projects from './Components/Projects';
-import Contact from './Components/Contact';
-import Footer from './Components/Footer';
+import BookList from './Components/BookList';
+import './App.css'; // Optional: Add some CSS styling
 
-function App() {
-  return (
-    <Router>
-      <div>
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<About />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
-  );
-}
+const App = () => {
+    const books = [
+        { title: 'To Kill a Mockingbird', author: 'Harper Lee', year: 1960 },
+        { title: '1984', author: 'George Orwell', year: 1949 },
+        { title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925 },
+        { title: 'Moby Dick', author: 'Herman Melville', year: 1851 },
+    ];
+
+    return (
+        <div>
+            <h1>My Book Collection</h1>
+            <BookList books={books} />
+        </div>
+    );
+};
 
 export default App;
