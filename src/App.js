@@ -1,7 +1,6 @@
-// src/App.js
 import React from 'react';
 import BookList from './Components/BookList';
-import './App.css'; // Optional: Add some CSS styling
+import './App.css'; 
 
 const App = () => {
     const books = [

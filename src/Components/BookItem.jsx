@@ -1,4 +1,3 @@
-// src/components/BookItem.js
 import React from 'react';
 
 const BookItem = ({ title, author, year }) => {
